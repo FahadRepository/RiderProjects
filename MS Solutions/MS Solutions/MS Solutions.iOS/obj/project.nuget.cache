@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "c9190E8wv3m+Hm1cnFX8eyEUFds2W9NsRw+jHsMLPqvMJB8F4uuMJ8Oqmh2xVMCUXGlZ8p5dUg4+O/Rp3hmDfw==",
+  "success": false,
+  "projectFilePath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/MS Solutions.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/mohammedfahad/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

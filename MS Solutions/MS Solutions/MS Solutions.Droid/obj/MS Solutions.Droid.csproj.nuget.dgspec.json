@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.Droid/MS Solutions.Droid.csproj": {}
+  },
+  "projects": {
+    "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.Droid/MS Solutions.Droid.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.Droid/MS Solutions.Droid.csproj",
+        "projectName": "MS_Solutions.Droid",
+        "projectPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.Droid/MS Solutions.Droid.csproj",
+        "packagesPath": "/Users/mohammedfahad/.nuget/packages/",
+        "outputPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.Droid/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/mohammedfahad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid13.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid13.0": {
+            "projectReferences": {
+              "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj": {
+                "projectPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid13.0": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+        <PackageReference Include="Syncfusion.Xamarin.Cards" Version="24.1.46" />
+        <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="sample-data.json" />
+      <EmbeddedResource Include="sample-data.json" />
+    </ItemGroup>
+</Project>

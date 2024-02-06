@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "r45bU5UnQEplHkCU3/hzyZoJnTY7hTxqWEsqNECHV4Qu4f96Dco/nhAzIloJ3va0bPLFMkfzfBX3OEtYP4Gq+w==",
+  "success": true,
+  "projectFilePath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions/MS Solutions.csproj",
+  "expectedPackageFiles": [
+    "/Users/mohammedfahad/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/mohammedfahad/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/mohammedfahad/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

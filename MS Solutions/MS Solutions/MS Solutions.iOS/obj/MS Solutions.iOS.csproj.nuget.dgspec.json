@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/MS Solutions.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/MS Solutions.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/MS Solutions.iOS.csproj",
+        "projectName": "MS_Solutions.iOS",
+        "projectPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/MS Solutions.iOS.csproj",
+        "packagesPath": "/Users/mohammedfahad/.nuget/packages/",
+        "outputPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS Solutions.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/mohammedfahad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj": {
+                "projectPath": "/Users/mohammedfahad/RiderProjects/MS Solutions/MS Solutions/MS_Solutions/MS_Solutions.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
