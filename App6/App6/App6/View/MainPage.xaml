@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local1="clr-namespace:App6.Renderer;assembly=App6"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             xmlns:local="clr-namespace:App6"
+             SelectedTabColor="White"
+             BackgroundColor="#f0f4f4"
+             BarBackgroundColor="#d8e4e4"
+             x:Class="App6.MainPage">
+    <NavigationPage.TitleView>
+        <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="onlylogo.png" HeightRequest="30" WidthRequest="30">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage IconImageSource="Home.png">
+        
+        <Grid Margin="20,40,20,30" RowSpacing="40" ColumnSpacing="20" Padding="0,30,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0" Grid.Column="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Asset" FontSize="10" VerticalTextAlignment="Start" Padding="10,0,0,0"/>
+                <Frame Grid.Row="1" CornerRadius="10" HasShadow="True" Padding="0,10,0,0">
+                    <StackLayout>
+                        <local1:ExtendedPicker x:Name="AssetPicker"
+                                               Title="Select"
+                                               Margin="10,0,0,0"
+                                               SelectedItem="{Binding OnAssetsSelect}"
+                                               ItemDisplayBinding="{Binding assetName}"
+                                               FontSize="15"
+                                               VerticalTextAlignment="End"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            
+            <Grid Grid.Row="0" Grid.Column="1" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="User" FontSize="10" VerticalTextAlignment="Start" Padding="10,0,0,0"/>
+                <Frame Grid.Row="1" CornerRadius="10" HasShadow="True" Padding="0,10,0,0">
+                    <StackLayout>
+                        <local1:ExtendedPicker x:Name="UserName" 
+                                               Title="Select"
+                                               Margin="10,0,0,0"
+                                               ItemDisplayBinding="{Binding studentname}"
+                                               SelectedItem="{Binding UserNameSelect}"
+                                               FontSize="15" 
+                                               VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            
+            <Grid Grid.Row="1" Grid.Column="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Date" FontSize="10" VerticalTextAlignment="Start" Padding="10,0,0,0"/>
+                <Frame Grid.Row="1" CornerRadius="10" HasShadow="True" Padding="0,10,0,0">
+                    <StackLayout>
+                        <local1:ExtendedDatePicker
+                            x:Name="DatePick"
+                            Date="{Binding SelectedDate}"
+                            Margin="10,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+             
+            <Grid Grid.Row="1" Grid.Column="1" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="" FontSize="10" VerticalTextAlignment="Start" Padding="10,0,0,0"/>
+                <Button Grid.Row="1"
+                        x:Name="SearchButton"
+                        Text="Search"
+                        BorderColor="Gray"
+                        TextColor="White"
+                        BackgroundColor="#507474"
+                        CornerRadius="10"
+                        Command="{Binding OnSearchClick}"
+                        Clicked="SearchButton_OnClicked"/>
+            </Grid>
+            
+            
+            <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="student.png" VerticalOptions="EndAndExpand"></Image>
+        </Grid>
+    </ContentPage>
+    <local:LoanTheAsset IconImageSource="add1.png"/>
+    <!-- <local:ReturnTheData IconImageSource="user2.png"/> -->
+
+</TabbedPage>

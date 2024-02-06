@@ -1,6 +1,4 @@
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.csproj.AssemblyReference.cache
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.AssemblyInfoInputs.cache
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.AssemblyInfo.cs
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.csproj.CoreCompileInputs.cache
@@ -10,8 +8,10 @@
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.dll
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.pdb
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/DataNotFound.xaml.g.cs
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/Controls/CustomEntry.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/IssuedAssets.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/LoanTheAsset.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/ReturnTheData.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/App.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/DataNotFound.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/IssuedAssets.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/LoanTheAsset.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/MainPage.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/ReturnTheData.xaml.g.cs

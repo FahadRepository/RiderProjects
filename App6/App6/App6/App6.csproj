@@ -22,4 +22,31 @@
       <None Remove="sample-data.json" />
       <EmbeddedResource Include="sample-data.json" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="View\App.xaml.cs">
+        <DependentUpon>App.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\DataNotFound.xaml.cs">
+        <DependentUpon>DataNotFound.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\IssuedAssets.xaml.cs">
+        <DependentUpon>IssuedAssets.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\LoanTheAsset.xaml.cs">
+        <DependentUpon>LoanTheAsset.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\MainPage.xaml.cs">
+        <DependentUpon>MainPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\ReturnTheData.xaml.cs">
+        <DependentUpon>ReturnTheData.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

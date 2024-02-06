@@ -44,8 +44,10 @@
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/add1.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/alien.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/home.png
+/Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/inbox.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/logo_pic.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/onlylogo.png
+/Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/returnbutton.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/splash_screen.xml
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/student.png
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/user2.png
@@ -614,5 +616,3 @@
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/inbox.png
-/Users/mohammedfahad/RiderProjects/App6/App6/App6.Droid/obj/Debug/res/drawable/returnbutton.png

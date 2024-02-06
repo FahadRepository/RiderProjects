@@ -1,9 +1,12 @@
+using System;
 using Android.Content;
 using Android.Graphics.Drawables;
+using Android.Widget;
 using App6.Droid.Renderer;
 using App6.Renderer;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using DatePicker = Xamarin.Forms.DatePicker;
 using TextAlignment = Android.Views.TextAlignment;
 
 [assembly:ExportRenderer(typeof(ExtendedDatePicker), typeof(ExtendedDatePickerRenderer))]
@@ -19,10 +22,11 @@ namespace App6.Droid.Renderer
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.DatePicker> e)
         {
             base.OnElementChanged(e);
-            if (e.NewElement != null)
+            if (Control != null)
             {
                 Control.Text = "DD/MM/YYYY";
-                // Control.CurrentHintTextColor = Color.Gray;
+                Control.SetTextColor(new Android.Graphics.Color(128, 128, 128));
+                Control.TextSize = 12f;
                 Control.Background = null;
             }
         }
