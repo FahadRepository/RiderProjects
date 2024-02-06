@@ -36,9 +36,9 @@ namespace App6
             {  
                 var jsonString = reader.ReadToEnd();  
                 _viewModel.ObjContactList = JsonConvert.DeserializeObject<FinalList>(jsonString);
-                // DateTime date = _viewModel.ObjContactList.transactions.Date;
-                // string formattedDate = date.ToString("dd-MM-yyyy");
-                // date.ToString();
+                _viewModel.DateOnlyTransactions = _viewModel.ObjContactList.transactions
+                    .Select(t => t.loanDate.Date)
+                    .ToList();
             }  
             AssetPicker.ItemsSource = _viewModel.ObjContactList.transactions;
             UserName.ItemsSource = _viewModel.ObjContactList.transactions;

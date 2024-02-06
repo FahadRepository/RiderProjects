@@ -18,6 +18,7 @@ namespace App6.Model
         public List<User> users { get; set; } 
         public List<Asset> assets { get; set; }
         public List<Transaction> transactions { get; set; }
+        public List<DateTime> DateOnlyTransactions { get; set; }
     }
 
     public class Transaction

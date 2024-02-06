@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -25,6 +26,7 @@ namespace App6.ViewModel
 
         public FinalList FilterDataItems= new FinalList();
         private FinalList _objContactList= new FinalList();
+        
 
         public FinalList ObjContactList
         {
@@ -71,7 +73,8 @@ namespace App6.ViewModel
                 
             }
         }
-        
+
+        public List<DateTime> DateOnlyTransactions { get; set; }
         
 
         #endregion
@@ -84,7 +87,7 @@ namespace App6.ViewModel
             {
                 var Data = ObjContactList.transactions.Where(x =>
                     (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName) &&
-                                                             (x.loanDate == this.Date)))).ToList();
+                                                             (x.loanDate.Date == this.Date)))).ToList();
                     FilterDataItems.transactions = Data;
             }
             catch (Exception ex)
