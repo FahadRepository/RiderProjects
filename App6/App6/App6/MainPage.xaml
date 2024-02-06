@@ -103,6 +103,6 @@
         </Grid>
     </ContentPage>
     <local:LoanTheAsset IconImageSource="add1.png"/>
-    <local:ReturnTheData IconImageSource="user2.png"/>
+    <!-- <local:ReturnTheData IconImageSource="user2.png"/> -->
 
 </TabbedPage>

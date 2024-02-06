@@ -86,6 +86,8 @@
                 <StackLayout>
                     <renderer:ExtendedPicker x:Name="ReceivingSupervisor"
                                              Title="Select"
+                                             SelectedItem="{Binding OnSupervisorSelect}"
+                                             ItemDisplayBinding="{Binding firstName}"
                                              Margin="10,0,0,0"
                                              FontSize="15"
                                              VerticalTextAlignment="End"/>
@@ -102,6 +104,8 @@
             <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" HasShadow="True" Padding="0,10,0,0">
                 <StackLayout>
                     <renderer:ExtendedDatePicker
+                        Date="{Binding SelectedDate}"
+                        x:Name="PickeTheDate"
                         Margin="10,0,0,0"/>
                 </StackLayout>
             </Frame>
@@ -114,6 +118,7 @@
                 CornerRadius="10"/>
         <Button Grid.Row="4" Grid.Column="1" 
                 Text="Save"
+                Clicked="SaveButton_Clicked"
                 TextColor="White"
                 BackgroundColor="#507474"
                 CornerRadius="10"/>
