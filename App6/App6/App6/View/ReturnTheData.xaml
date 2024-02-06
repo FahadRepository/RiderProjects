@@ -4,14 +4,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:renderer="clr-namespace:App6.Renderer;assembly=App6"
              x:Class="App6.ReturnTheData">
-    <Grid x:Name="ReturnPage" RowSpacing="50" ColumnSpacing="10" Margin="20,40,20,30">
+    <ContentPage.Content>
+        <CollectionView x:Name="ReturnData" BackgroundColor="#f0f4f4">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="5,5,5,5" Spacing="10">
+                        <Grid RowSpacing="50" ColumnSpacing="10" Margin="20,40,20,30">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="200" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
@@ -19,7 +24,7 @@
             
         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Return Asset" TextColor="#507474" FontSize="30" FontAttributes="Bold"/>
         
-        <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" RowSpacing="20">
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" RowSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -28,16 +33,16 @@
             </Grid.RowDefinitions>
             
             <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="15">
-                <Frame CornerRadius="10" Padding="10" HasShadow="True">
-                    <StackLayout Orientation="Horizontal">
+                <Frame  CornerRadius="10" Padding="10" HasShadow="True">
+                    <StackLayout  Orientation="Horizontal">
                         <Label Text="Name:" TextColor="Black" FontSize="12" FontAttributes="Bold"/>
-                        <Label Text="{Binding returnDate}" TextColor="Black" FontSize="10"/>
+                        <Label Text="{Binding studentname}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
                 <Frame CornerRadius="10" Padding="10" HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Asset:" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
-                        <Label Text="{Binding loanDate}" TextColor="Black" FontSize="10"/>
+                        <Label Text="{Binding assetName}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -46,13 +51,13 @@
                 <Frame Grid.Row="0" CornerRadius="10" Padding="10" HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Type:" TextColor="Black" FontSize="12" FontAttributes="Bold"/>
-                        <!-- <Label Text="{Binding returnDate}" TextColor="Black" FontSize="10"/> -->
+                        <Label Text="{Binding transactionType}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
                 <Frame CornerRadius="10" Padding="10" HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Issue Date:" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
-                        <!-- <Label Text="{Binding loanDate}" TextColor="Black" FontSize="10"/> -->
+                        <Label Text="{Binding loanDate}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -61,7 +66,7 @@
                 <Frame Grid.Row="0" CornerRadius="10" Padding="10" HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Asset ID:" TextColor="Black" FontSize="12" FontAttributes="Bold"/>
-                        <!-- <Label Text="{Binding returnDate}" TextColor="Black" FontSize="10"/> -->
+                        <Label Text="{Binding assetId}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -70,7 +75,7 @@
                 <Frame Grid.Row="0" CornerRadius="10" Padding="10" HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Transaction ID:" TextColor="Black" FontSize="12" FontAttributes="Bold"/>
-                        <!-- <Label Text="{Binding returnDate}" TextColor="Black" FontSize="10"/> -->
+                        <Label Text="{Binding id}" TextColor="Black" FontSize="12"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -118,9 +123,13 @@
                 CornerRadius="10"/>
         <Button Grid.Row="4" Grid.Column="1" 
                 Text="Save"
-                Clicked="SaveButton_Clicked"
                 TextColor="White"
                 BackgroundColor="#507474"
                 CornerRadius="10"/>
     </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
 </ContentPage>

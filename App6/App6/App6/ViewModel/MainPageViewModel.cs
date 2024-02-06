@@ -81,19 +81,22 @@ namespace App6.ViewModel
 
         #region Methods
 
-        public void Filterdata()
+        public List<Transaction> Filterdata()
         {
             try
             {
                 var Data = ObjContactList.transactions.Where(x =>
                     (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName) &&
                                                              (x.loanDate.Date == this.Date)))).ToList();
-                    FilterDataItems.transactions = Data;
+                FilterDataItems.transactions = Data;
+                return FilterDataItems.transactions;
             }
             catch (Exception ex)
             {
                 
             }
+
+            return null;
         }
 
 

@@ -17,20 +17,12 @@ namespace App6 {
     public partial class ReturnTheData : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Grid ReturnPage;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::App6.Renderer.ExtendedPicker ReceivingSupervisor;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::App6.Renderer.ExtendedDatePicker PickeTheDate;
+        private global::Xamarin.Forms.CollectionView ReturnData;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ReturnTheData));
-            ReturnPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "ReturnPage");
-            ReceivingSupervisor = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App6.Renderer.ExtendedPicker>(this, "ReceivingSupervisor");
-            PickeTheDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App6.Renderer.ExtendedDatePicker>(this, "PickeTheDate");
+            ReturnData = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "ReturnData");
         }
     }
 }

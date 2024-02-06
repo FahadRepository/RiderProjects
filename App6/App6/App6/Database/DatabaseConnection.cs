@@ -22,11 +22,11 @@ namespace App6.Database
             return database.Table<Loan>().ToListAsync();
         }
 
-        public Task<Loan> GetNoteAsync(int id)
+        public Task<Loan> GetNoteAsync( string student, string asset, DateTime date)
         {
             // Get a specific note.
             return database.Table<Loan>()
-                .Where(i => i.Id == id)
+                .Where(i =>i.Student== student && i.Asset==asset && i.Date==date)
                 .FirstOrDefaultAsync();
         }
 
