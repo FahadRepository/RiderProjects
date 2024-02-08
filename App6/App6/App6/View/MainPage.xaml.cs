@@ -19,7 +19,7 @@ namespace App6
     {
         public MainPageViewModel _viewModel;
         
-        public static List<Transaction> DataHold = null;
+        
         public MainPage()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace App6
 
         private void SearchButton_OnClicked(object sender, EventArgs e)
         {
-           DataHold =_viewModel.Filterdata();
+           _viewModel.Filterdata();
            if (_viewModel.FilterDataItems.transactions.Any())
            {
                Navigation.PushAsync(new IssuedAssets(_filterdata:_viewModel.FilterDataItems.transactions));

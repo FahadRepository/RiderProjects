@@ -27,6 +27,21 @@ namespace App6.ViewModel
         public FinalList FilterDataItems= new FinalList();
         private FinalList _objContactList= new FinalList();
         
+        
+        private Transaction _onAssetsSelect;
+
+        public Transaction OnAssetsSelect
+        {
+            get => _onAssetsSelect;
+            set
+            {
+                SetField( ref _onAssetsSelect, value);
+
+                if (_onAssetsSelect != null)
+                    assetsName=_onAssetsSelect.assetName;
+            }
+            
+        }
 
         public FinalList ObjContactList
         {
@@ -43,20 +58,7 @@ namespace App6.ViewModel
             }
             
         }
-        private Transaction _onAssetsSelect;
-
-        public Transaction OnAssetsSelect
-        {
-            get => _onAssetsSelect;
-            set
-            {
-                SetField( ref _onAssetsSelect, value);
-
-                if (_onAssetsSelect != null)
-                    assetsName=_onAssetsSelect.assetName;
-            }
-            
-        }
+        
         
         private Transaction _userNameSelect;
 
@@ -81,7 +83,7 @@ namespace App6.ViewModel
 
         #region Methods
 
-        public List<Transaction> Filterdata()
+        public void  Filterdata()
         {
             try
             {
@@ -89,14 +91,13 @@ namespace App6.ViewModel
                     (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName) &&
                                                              (x.loanDate.Date == this.Date)))).ToList();
                 FilterDataItems.transactions = Data;
-                return FilterDataItems.transactions;
+                
             }
             catch (Exception ex)
             {
                 
             }
-
-            return null;
+            
         }
 
 

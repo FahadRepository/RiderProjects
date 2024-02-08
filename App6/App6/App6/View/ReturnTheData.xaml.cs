@@ -10,24 +10,30 @@ using App6.ViewModel;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Xaml.Diagnostics;
 
 namespace App6
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReturnTheData : ContentPage
     {
-        
+
         public ReturnDataViewModel _viewModel;
+
         
-        
-        public ReturnTheData()
+        public ReturnTheData(Transaction _transaction)
         {
             
             InitializeComponent();
             BindingContext =_viewModel= new ReturnDataViewModel();
-            APIViewModel LocalAPIViewModel = new APIViewModel();           
-            ReturnData.ItemsSource = LocalAPIViewModel.Data;
             GetJsonData();
+            _viewModel.ReturnData = _transaction;
+            _viewModel.AssetName = _viewModel.ReturnData.assetName;
+            _viewModel.StudentName = _viewModel.ReturnData.studentname;
+            _viewModel.TransactionType = _viewModel.ReturnData.transactionType;
+            _viewModel.LoanDate = _viewModel.ReturnData.loanDate;
+            _viewModel.AssetId = _viewModel.ReturnData.assetId;
+            _viewModel.Id = _viewModel.ReturnData.id;
         }
         
         void GetJsonData()  
@@ -41,12 +47,12 @@ namespace App6
                 var jsonString = reader.ReadToEnd();  
                 _viewModel.ObjContactList = JsonConvert.DeserializeObject<FinalList>(jsonString);
             }  
-            // ReceivingSupervisor.ItemsSource = _viewModel.ObjContactList.users;
+            ReceivingSupervisor.ItemsSource = _viewModel.ObjContactList.users;
         }
         
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            var loanData = new
+            var loanData = new Transaction
             {
                 // SupervisorName = ReceivingSupervisor.SelectedItem,
                 // LoanDate = PickeTheDate.Date.ToString("dd-MM-yyyy")

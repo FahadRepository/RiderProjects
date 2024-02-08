@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using App6.Database;
 using App6.Model;
+using App6.ViewModel;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,9 +18,11 @@ namespace App6
     public partial class LoanTheAsset : ContentPage
     {
 
+        public LoanTheAssetViewModel _viewModel;
         public LoanTheAsset()
         {
             InitializeComponent();
+            BindingContext = _viewModel = new LoanTheAssetViewModel();
             GetJsonData();
         }
         
@@ -57,6 +60,7 @@ namespace App6
             StudentPicker.SelectedItem = null;
             AssetPicker.SelectedItem = null;
             DatePicker.Date = DateTime.Now;
+            
             
             
             await DisplayAlert("Success", "Data has been saved in the database.", "OK");

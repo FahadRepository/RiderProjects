@@ -29,7 +29,7 @@
                     <StackLayout>
                         <local1:ExtendedPicker x:Name="SupervisorPicker"
                                                ItemDisplayBinding="{Binding loaningSupervisorname}"
-                                               SelectedItem="{Binding }"
+                                               SelectedItem="{Binding OnSelectedSupervisor}"
                                                Title="Select" 
                                                FontSize="10"/>
                     </StackLayout>
@@ -46,6 +46,7 @@
                     <StackLayout>
                         <local1:ExtendedPicker x:Name="StudentPicker"
                                                ItemDisplayBinding="{Binding studentname}"
+                                               SelectedItem="{Binding OnSelectedStudent}"
                                                Title="Select" 
                                                FontSize="10"/>
                     </StackLayout>
@@ -62,6 +63,7 @@
                     <StackLayout>
                         <local1:ExtendedPicker x:Name="AssetPicker"
                                                ItemDisplayBinding="{Binding assetName}"
+                                               SelectedItem="{Binding OnSelectedAsset}"
                                                Title="Select" 
                                                VerticalOptions="Start"
                                                FontSize="10"/>
@@ -79,6 +81,7 @@
                     <StackLayout>
                         <local1:ExtendedDatePicker FontSize="10"
                                                    x:Name="DatePicker"
+                                                   Date="{Binding OnSelectedDate}"
                                                    Margin="0,0,0,10"/>
                     </StackLayout>
                 </Frame>
