@@ -50,11 +50,11 @@ namespace App6
            _viewModel.Filterdata();
            if (_viewModel.FilterDataItems.transactions.Any())
            {
-               Navigation.PushAsync(new IssuedAssets(_filterdata:_viewModel.FilterDataItems.transactions));
+               Navigation.PushAsync(new IssuedAssetsPage(_filterdata:_viewModel.FilterDataItems.transactions));
            }
            else
            {
-               Navigation.PushAsync(new DataNotFound());
+               Navigation.PushAsync(new DataNotFoundPage());
            }
             
         }

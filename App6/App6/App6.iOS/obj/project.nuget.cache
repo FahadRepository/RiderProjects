@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PZouYgUUDU/2ZO5Mh/Xpy5F0Io3JgqHMt/jSl1ul4WL4Utm1VydSbx0PSRjk/rOdm2/hlGJJiXVF+mjO4W8kSA==",
+  "dgSpecHash": "kfbiaTj3J/oq8HZ6ZviYtj+VMgOIwcIdIhud1nOkY4efL1l/45WIebAojqKxfpywqd4TwYIvy4JhndTYAacfYw==",
   "success": true,
   "projectFilePath": "/Users/mohammedfahad/RiderProjects/App6/App6/App6.iOS/App6.iOS.csproj",
   "expectedPackageFiles": [
@@ -14,8 +14,10 @@
     "/Users/mohammedfahad/.nuget/packages/syncfusion.xamarin.core/24.1.46/syncfusion.xamarin.core.24.1.46.nupkg.sha512",
     "/Users/mohammedfahad/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
     "/Users/mohammedfahad/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/mohammedfahad/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/mohammedfahad/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "/Users/mohammedfahad/.nuget/packages/xamarin.communitytoolkit/2.0.6/xamarin.communitytoolkit.2.0.6.nupkg.sha512",
+    "/Users/mohammedfahad/.nuget/packages/xamarin.essentials/1.8.1/xamarin.essentials.1.8.1.nupkg.sha512",
     "/Users/mohammedfahad/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": [

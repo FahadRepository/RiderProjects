@@ -15,6 +15,7 @@
         <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
         <PackageReference Include="Syncfusion.Xamarin.Cards" Version="24.1.46" />
         <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     </ItemGroup>
 
@@ -28,15 +29,15 @@
         <DependentUpon>App.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="View\DataNotFound.xaml.cs">
+      <Compile Update="View\DataNotFoundPage.xaml.cs">
         <DependentUpon>DataNotFound.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="View\IssuedAssets.xaml.cs">
+      <Compile Update="View\IssuedAssetsPage.xaml.cs">
         <DependentUpon>IssuedAssets.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="View\LoanTheAsset.xaml.cs">
+      <Compile Update="View\LoanAssetPage.xaml.cs">
         <DependentUpon>LoanTheAsset.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
@@ -44,7 +45,7 @@
         <DependentUpon>MainPage.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="View\ReturnTheData.xaml.cs">
+      <Compile Update="View\ReturnAssetPage.xaml.cs">
         <DependentUpon>ReturnTheData.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>

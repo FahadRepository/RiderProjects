@@ -20,7 +20,7 @@ namespace App6.ViewModel
 
         private string assetsName;
         private string studentName;
-        private DateTime Date;
+        private DateTime? Date;
         private DateTime _selectedDate;
 
 
@@ -87,11 +87,42 @@ namespace App6.ViewModel
         {
             try
             {
-                var Data = ObjContactList.transactions.Where(x =>
-                    (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName) &&
-                                                             (x.loanDate.Date == this.Date)))).ToList();
-                FilterDataItems.transactions = Data;
-                
+                if (this.assetsName != null && this.studentName != null)
+                {
+                    var Data = ObjContactList.transactions.Where(x =>
+                        (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName) &&
+                                                                 (x.loanDate.Date == this.Date)))).ToList();
+                    FilterDataItems.transactions = Data;
+                }
+                else if (this.assetsName == null && this.studentName != null)
+                {
+                    var Data = ObjContactList.transactions.Where(x =>
+                        ((x.studentname.Equals(this.studentName) &&
+                                                                 (x.loanDate.Date == this.Date)))).ToList();
+                    FilterDataItems.transactions = Data;
+                }
+                else if (this.assetsName!=null && this.studentName==null)
+                {
+                    var Data = ObjContactList.transactions.Where(x =>
+                        (x.assetName.Equals(this.assetsName) &&
+                                                                 (x.loanDate.Date == this.Date))).ToList();
+                    FilterDataItems.transactions = Data;
+                }
+                else if (this.assetsName == null && this.studentName == null)
+                {
+                    var Data = ObjContactList.transactions.Where(x => (x.loanDate.Date == this.Date)).ToList();
+                    FilterDataItems.transactions = Data;
+                }
+                else if(this.assetsName != null && this.studentName != null && this.Date == null)
+                {
+                    var Data = ObjContactList.transactions.Where(x =>
+                        (x.assetName.Equals(this.assetsName) && (x.studentname.Equals(this.studentName)))).ToList();
+                    FilterDataItems.transactions = Data;
+                }
+                else
+                {
+                    FilterDataItems.transactions = ObjContactList.transactions;
+                }
             }
             catch (Exception ex)
             {

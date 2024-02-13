@@ -104,7 +104,7 @@
             <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="student.png" VerticalOptions="EndAndExpand"></Image>
         </Grid>
     </ContentPage>
-    <local:LoanTheAsset IconImageSource="add1.png"/>
+    <local:LoanAssetPage IconImageSource="add1.png"/>
     <!-- <local:ReturnTheData IconImageSource="user2.png"/> -->
 
 </TabbedPage>

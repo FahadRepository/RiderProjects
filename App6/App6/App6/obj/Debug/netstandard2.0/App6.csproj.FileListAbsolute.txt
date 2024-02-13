@@ -10,8 +10,8 @@
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/App6.pdb
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/Controls/CustomEntry.xaml.g.cs
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/App.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/DataNotFound.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/IssuedAssets.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/LoanTheAsset.xaml.g.cs
 /Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/MainPage.xaml.g.cs
-/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/ReturnTheData.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/DataNotFoundPage.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/IssuedAssetsPage.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/LoanAssetPage.xaml.g.cs
+/Users/mohammedfahad/RiderProjects/App6/App6/App6/obj/Debug/netstandard2.0/View/ReturnAssetPage.xaml.g.cs
