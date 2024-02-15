@@ -71,6 +71,7 @@ namespace App6.Services
         {
             _transactions.Add(transaction);
             await SaveTransactions(_transactions);
+            
         }
 
         async public Task UpdateTransaction(Transaction ReturnData, string transId)

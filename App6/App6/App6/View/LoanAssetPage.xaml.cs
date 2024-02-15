@@ -44,16 +44,14 @@ namespace App6
         }  
 
         
-        // private async void SaveButton_Clicked(object sender, EventArgs e)
-        // {
-        //
-        //     SupervisorPicker.SelectedItem = null;
-        //     StudentPicker.SelectedItem = null;
-        //     AssetPicker.SelectedItem = null;
-        //     DatePicker.Date = DateTime.Now;
-        //     _viewModel.AddTransactionCommand.Execute(_viewModel.Transaction);
-        //     await DisplayAlert("Success", "Data has been saved in the database.", "OK");
-        //     
-        // }
+        
+        private async void Button_OnClicked(object sender, EventArgs e)
+        {
+            SupervisorPicker.SelectedItem = null;
+            StudentPicker.SelectedItem = null;
+            AssetPicker.SelectedItem = null;
+            DatePicker.Date = DateTime.Now;
+            await DisplayAlert("Success", "Data has been saved in the database.", "OK");
+        }
     }
 }

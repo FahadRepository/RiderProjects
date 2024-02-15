@@ -56,7 +56,8 @@ namespace App6
            {
                await Navigation.PushAsync(new DataNotFoundPage());
            }
-            
+           UserName.SelectedItem = null;
+           AssetPicker.SelectedItem = null;
         }
     }
 }

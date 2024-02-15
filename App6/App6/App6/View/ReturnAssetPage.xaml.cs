@@ -50,6 +50,15 @@ namespace App6
             }  
             ReceivingSupervisor.ItemsSource = _viewModel.ObjContactList.users;
         }
-        
+
+        private async Task Button_returnData(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void Button_OnClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Success", "Data has been updated in the database.", "OK");
+        }
     }
 }

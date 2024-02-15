@@ -83,6 +83,7 @@
                     <StackLayout>
                         <local1:ExtendedDatePicker FontSize="10"
                                                    x:Name="DatePicker"
+                                                   MinimumDate="01/01/2020"
                                                    Date="{Binding OnSelectedDate}"
                                                    Margin="0,0,0,10"/>
                     </StackLayout>
@@ -96,6 +97,7 @@
                     CornerRadius="10"/>
             <Button Grid.Row="5" Grid.Column="1" 
                     Text="Save"
+                    Clicked="Button_OnClicked"
                     Command="{Binding AddTransactionCommand}"
                     TextColor="White"
                     BackgroundColor="#507474"
