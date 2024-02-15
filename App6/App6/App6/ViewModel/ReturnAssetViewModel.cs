@@ -152,7 +152,7 @@ namespace App6.ViewModel
             ReturnData.returnDate = Date;
             
             
-            transactionService.UpdateTransaction(ReturnData, transId: transId);
+            await transactionService.UpdateTransaction(ReturnData, transId: transId);
             
         }
         

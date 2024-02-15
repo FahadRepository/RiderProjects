@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local1="clr-namespace:App6.Renderer;assembly=App6"
              x:Class="App6.LoanAssetPage">
+    <ScrollView>
         <Grid RowSpacing="60" ColumnSpacing="10" Margin="20,40,20,30">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
@@ -18,7 +19,8 @@
             </Grid.RowDefinitions>
             
             <Label Grid.Column="0" Grid.Row="0" Text="Loan Asset" TextColor="#507474" FontSize="30" FontAttributes="Bold"/>
-            
+
+        
             <Grid Grid.Row="1" Grid.Column="0" RowSpacing="0" Grid.ColumnSpan="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"/>
@@ -99,4 +101,5 @@
                     BackgroundColor="#507474"
                     CornerRadius="10"/>
         </Grid>
+    </ScrollView>
 </ContentPage>

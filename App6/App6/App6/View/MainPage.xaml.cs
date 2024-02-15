@@ -45,16 +45,16 @@ namespace App6
             UserName.ItemsSource = _viewModel.ObjContactList.transactions;
         }
 
-        private void SearchButton_OnClicked(object sender, EventArgs e)
+        async private void SearchButton_OnClicked(object sender, EventArgs e)
         {
-           _viewModel.Filterdata();
+           await _viewModel.Filterdata();
            if (_viewModel.FilterDataItems.transactions.Any())
            {
-               Navigation.PushAsync(new IssuedAssetsPage(_filterdata:_viewModel.FilterDataItems.transactions));
+               await Navigation.PushAsync(new IssuedAssetsPage(_filterdata:_viewModel.FilterDataItems.transactions));
            }
            else
            {
-               Navigation.PushAsync(new DataNotFoundPage());
+               await Navigation.PushAsync(new DataNotFoundPage());
            }
             
         }
