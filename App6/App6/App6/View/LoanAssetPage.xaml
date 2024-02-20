@@ -98,7 +98,6 @@
             <Button Grid.Row="5" Grid.Column="1" 
                     Text="Save"
                     Clicked="Button_OnClicked"
-                    Command="{Binding AddTransactionCommand}"
                     TextColor="White"
                     BackgroundColor="#507474"
                     CornerRadius="10"/>

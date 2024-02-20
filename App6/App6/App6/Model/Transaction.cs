@@ -1,4 +1,5 @@
 using System;
+using Xamarin.Forms;
 
 namespace App6.Model
 {
@@ -17,6 +18,5 @@ namespace App6.Model
             public string receivingSupervisorId { get; set; }
             public string receivingSupervisorname { get; set; }
             public DateTime? returnDate { get; set; }
-        
         }
     }

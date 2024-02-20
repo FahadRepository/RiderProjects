@@ -16,7 +16,6 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage IconImageSource="Home.png">
-        
         <Grid Margin="20,40,20,30" RowSpacing="40" ColumnSpacing="20" Padding="0,30,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*" />

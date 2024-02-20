@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using App6.Model;
 using App6.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace App6.ViewModel
@@ -25,7 +26,7 @@ namespace App6.ViewModel
         public ReturnAssetViewModel(Transaction returnData)
         {
             ReturnData = returnData;
-            UpdateTransactionCommand = new Command(UpdateTransaction);
+            // UpdateTransactionCommand = new Command(UpdateTransaction);
         }
 
         #region MyRegion
@@ -40,6 +41,7 @@ namespace App6.ViewModel
         private DateTime _loanDate;
         private string _assetId;
         private string _id;
+        private string _loaningsupervisorName;
         
 
         public string AssetName
@@ -103,6 +105,16 @@ namespace App6.ViewModel
             }
         }
         
+        public string Loaningsupervisorname
+        {
+            get => _loaningsupervisorName;
+            set
+            {
+                _loaningsupervisorName = value;
+                OnPropertyChanged();
+            }
+        }
+        
 
         
         public DateTime OnSelectedDate
@@ -116,15 +128,20 @@ namespace App6.ViewModel
         }
         
 
-        private Transaction _onSupervisorSelect;
+        private Transaction _onsupervisorSelect;
+
+        public string supervisorName;
         public Transaction OnSelectedSupervisor
         {
-            get => _onSupervisorSelect;
+            get => _onsupervisorSelect;
             set
             {
-                SetField( ref _onSupervisorSelect, value);
-                supervisorsName=_onSupervisorSelect.receivingSupervisorname;
+                SetField( ref _onsupervisorSelect, value);
+
+                if (_onsupervisorSelect != null)
+                    supervisorName=_onsupervisorSelect.loaningSupervisorname;
             }
+            
         }
         
         
@@ -136,23 +153,36 @@ namespace App6.ViewModel
                 }
 
 
+        private Transaction _transaction = new Transaction();
+        public bool UpdatedTransaction { get; set; }
 
-        public ICommand UpdateTransactionCommand { get; set; }
+        // public ICommand UpdateTransactionCommand { get; set; }
         public async void UpdateTransaction()
         {
             var transactionService = new TransactionService(fileName:"sample-data.json");
             var transId = ReturnData.id;
-            ReturnData.id = Guid.NewGuid().ToString();
-            ReturnData.studentname = _studentName;
-            ReturnData.assetName = _assetName;
-            ReturnData.assetId = _assetId;
-            ReturnData.loanDate = LoanDate;
-            ReturnData.transactionType = "Received";
-            ReturnData.receivingSupervisorname = supervisorsName;
-            ReturnData.returnDate = Date;
             
-            
-            await transactionService.UpdateTransaction(ReturnData, transId: transId);
+            _transaction.id = Guid.NewGuid().ToString();
+            _transaction.studentname = _studentName;
+            _transaction.assetName = _assetName;
+            _transaction.assetId = _assetId;
+            _transaction.loanDate = LoanDate;
+            _transaction.loaningSupervisorname = _loaningsupervisorName;
+            _transaction.transactionType = "Received";
+            _transaction.receivingSupervisorname = supervisorName;
+            _transaction.returnDate = Date;
+
+            try
+            {
+
+                await transactionService.UpdateTransaction(_transaction, transId: transId);
+                UpdatedTransaction = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             
         }
         

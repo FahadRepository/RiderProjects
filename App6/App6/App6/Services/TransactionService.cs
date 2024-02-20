@@ -19,7 +19,6 @@ namespace App6.Services
     {
         private string _fileName;
         private List<Transaction> _transactions;
-
         public TransactionService(string fileName)
         {
             _fileName = fileName;
@@ -41,7 +40,6 @@ namespace App6.Services
                     {
                         var json = reader.ReadToEnd();
                         _transactions = JsonConvert.DeserializeObject<FinalList>(json).transactions;
-                        //await SecureStorage.SetAsync("transaction", json);
                         var transactionjson = JsonConvert.SerializeObject(_transactions, Formatting.Indented);
 
                         await SecureStorage.SetAsync("transaction", transactionjson);
@@ -74,15 +72,15 @@ namespace App6.Services
             
         }
 
-        async public Task UpdateTransaction(Transaction ReturnData, string transId)
+        async public Task UpdateTransaction(Transaction transaction, string transId)
         {
             Transaction TransactionToRemove = _transactions.Find(x => x.id == transId);
             _transactions.Remove(TransactionToRemove);
-            _transactions.Add(ReturnData);
+            _transactions.Add(transaction);
             await SaveTransactions(_transactions);
         }
 
-
+        
         async public Task SaveTransactions(List<Transaction> transactions)
         {
             try
@@ -90,12 +88,6 @@ namespace App6.Services
                 var json = JsonConvert.SerializeObject(transactions, Formatting.Indented);
 
                 await SecureStorage.SetAsync("transaction", json);
-                //var assembly = typeof(LoanAssetViewModel).GetTypeInfo().Assembly;
-                //var fileName = $"{assembly.GetName().Name}.{_fileName}";
-
-                //var localAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                //var filePath = Path.Combine(localAppDataPath, fileName);
-                //File.WriteAllText(filePath, json);
             }
             catch (Exception ex)
             {

@@ -3,11 +3,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:renderer="clr-namespace:App6.Renderer;assembly=App6"
+             xmlns:viewModel="clr-namespace:App6.ViewModel;assembly=App6"
              x:Class="App6.ReturnAssetPage">
     <ContentPage.Content>
-        
-                    
-                    <StackLayout Padding="5,5,5,5" Spacing="10">
+        <ScrollView>
+            <StackLayout Padding="5,5,5,5" Spacing="10">
                         <Grid RowSpacing="50" ColumnSpacing="10" Margin="20,40,20,30">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
@@ -90,8 +90,8 @@
                 <StackLayout>
                     <renderer:ExtendedPicker x:Name="ReceivingSupervisor"
                                              Title="Select"
-                                             SelectedItem="{Binding OnSelectedSupervisor}"
-                                             ItemDisplayBinding="{Binding firstName}"
+                                             SelectedItem="{Binding  Source={RelativeSource AncestorType ={x:Type viewModel:ReturnAssetViewModel}}, Path= OnSelectedSupervisor}"
+                                             ItemDisplayBinding="{Binding loaningSupervisorname}"
                                              Margin="10,0,0,0"
                                              FontSize="15"
                                              VerticalTextAlignment="End"/>
@@ -124,13 +124,11 @@
         <Button Grid.Row="4" Grid.Column="1" 
                 Text="Save"
                 Clicked="Button_OnClicked"
-                Command="{Binding UpdateTransactionCommand}"
                 TextColor="White"
                 BackgroundColor="#507474"
                 CornerRadius="10"/>
     </Grid>
-                    </StackLayout>
-        
-        
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

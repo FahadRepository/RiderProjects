@@ -47,11 +47,20 @@ namespace App6
         
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            SupervisorPicker.SelectedItem = null;
-            StudentPicker.SelectedItem = null;
-            AssetPicker.SelectedItem = null;
-            DatePicker.Date = DateTime.Now;
-            await DisplayAlert("Success", "Data has been saved in the database.", "OK");
+            _viewModel.AddedTransaction = false;
+            _viewModel.AddTransaction();
+            if (_viewModel.AddedTransaction)
+            {
+                SupervisorPicker.SelectedItem = null;
+                StudentPicker.SelectedItem = null;
+                AssetPicker.SelectedItem = null;
+                DatePicker.Date = DateTime.Now;
+                await DisplayAlert("Success", "Data has been saved in the database.", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Transaction Failed", "Data has not been saved in the database.", "OK");
+            }
         }
     }
 }

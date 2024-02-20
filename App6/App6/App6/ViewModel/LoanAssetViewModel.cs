@@ -14,7 +14,7 @@ public class LoanAssetViewModel : BaseViewModel
 
     public LoanAssetViewModel()
     {
-        AddTransactionCommand = new Command(AddTransaction);
+        
     }
     
     private string supervisorsName;
@@ -32,7 +32,6 @@ public class LoanAssetViewModel : BaseViewModel
 
     private Transaction _transaction = new Transaction();
     
-    public ICommand AddTransactionCommand { get; set; }
     
     private Transaction _onSupervisorSelect;
     public Transaction OnSelectedSupervisor
@@ -90,9 +89,9 @@ public class LoanAssetViewModel : BaseViewModel
         }
     }
     
+    public bool AddedTransaction { get; set; }
     
-    
-    private async void AddTransaction()
+    public async void AddTransaction()
     {
         var transactionService = new TransactionService(fileName:"sample-data.json");
 
@@ -111,10 +110,19 @@ public class LoanAssetViewModel : BaseViewModel
         _transaction.assetId = null;
         _transaction.loaningSupervisorId = null;
         
-        
+        try
+        {
+
+            await transactionService.AddTransaction(_transaction);
+            AddedTransaction = true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
 
         // Add the transaction to the list
-        transactionService.AddTransaction(_transaction);
         
 
         // Create a new transaction object

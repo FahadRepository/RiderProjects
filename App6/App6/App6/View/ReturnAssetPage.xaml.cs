@@ -35,6 +35,7 @@ namespace App6
             _viewModel.LoanDate = _viewModel.ReturnData.loanDate;
             _viewModel.AssetId = _viewModel.ReturnData.assetId;
             _viewModel.Id = _viewModel.ReturnData.id;
+            _viewModel.Loaningsupervisorname = _viewModel.ReturnData.loaningSupervisorname;
         }
         
         void GetJsonData()  
@@ -48,17 +49,20 @@ namespace App6
                 var jsonString = reader.ReadToEnd();  
                 _viewModel.ObjContactList = JsonConvert.DeserializeObject<FinalList>(jsonString);
             }  
-            ReceivingSupervisor.ItemsSource = _viewModel.ObjContactList.users;
+            ReceivingSupervisor.ItemsSource = _viewModel.ObjContactList.transactions;
         }
-
-        private async Task Button_returnData(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Success", "Data has been updated in the database.", "OK");
+            _viewModel.UpdatedTransaction = false;
+            _viewModel.UpdateTransaction();
+            if (_viewModel.UpdatedTransaction)
+            {
+                await DisplayAlert("Success", "Data has been updated in the database.", "OK");
+                await Navigation.PushAsync(new MainPage());
+            }
+            
         }
+        
     }
 }

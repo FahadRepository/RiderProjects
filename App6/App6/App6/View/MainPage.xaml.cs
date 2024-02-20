@@ -50,6 +50,9 @@ namespace App6
            await _viewModel.Filterdata();
            if (_viewModel.FilterDataItems.transactions.Any())
            {
+               AssetPicker.ItemsSource = null;
+               UserName.ItemsSource = null;
+               DatePick.Date = new DateTime();
                await Navigation.PushAsync(new IssuedAssetsPage(_filterdata:_viewModel.FilterDataItems.transactions));
            }
            else

@@ -19,12 +19,12 @@ namespace App6
         public IssuedAssetViewModel _viewModel;
         public IssuedAssetsPage(List<Transaction> _filterdata)
         {
-            
-            
             InitializeComponent();
             BindingContext =_viewModel= new IssuedAssetViewModel();
             _viewModel.AnotherFilterItem = _filterdata;
-            _viewModel.IsDataAvailable = false;
+            _viewModel.CanDataReturn = _viewModel.AnotherFilterItem.All(x => x.receivingSupervisorname == null);
+            _viewModel.IsDataAvailable = _viewModel.AnotherFilterItem.All(x => x.receivingSupervisorname != null);
+            _viewModel.Colour = _viewModel.AnotherFilterItem.Any(x=> x.receivingSupervisorname==null) ? Brush.OrangeRed : Brush.Teal;
             CardsView.ItemsSource = _viewModel.AnotherFilterItem;
         }
         
